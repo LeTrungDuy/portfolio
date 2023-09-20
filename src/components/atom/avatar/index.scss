@@ -1,0 +1,12 @@
+.portfolio-avatar {
+  padding-top: 60px;
+  img {
+    width: 100%;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  @media (max-width: 1600px){
+    padding-top: 30px;
+  }
+}

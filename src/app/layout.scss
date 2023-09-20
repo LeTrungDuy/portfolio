@@ -1,0 +1,19 @@
+.portfolio-page {
+  width: 100%;
+  min-height: 100vh;
+  clear: both;
+  float: left;
+  padding-left: 370px;
+  // background-color: #E9F9FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @media (max-width: 1600px){
+    padding-left: 300px;
+  }
+  
+  @media (max-width: 1040px){
+    padding: 80px 0px;
+  }
+}
