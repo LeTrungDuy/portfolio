@@ -1,17 +1,17 @@
 .portfolio-navitem {
   font-size: 16px;
   line-height: 30px;
-  color: #184167;
+  color: var(--primary-color);
   border-radius: 4px;
 
   &.active {
-    background-color: #184167;
+    background-color: var(--primary-color);
     color: #ffffff;
     padding: 8px;
   }
 
   &:hover {
-    background-color: #184167;
+    background-color: var(--primary-color);
     color: #ffffff;
     padding: 8px;
   }
@@ -19,9 +19,9 @@
   &.primary,
   &.secondary {
     color: #fff;
-    background-color: #184167;
+    background-color: var(--primary-color);
     display: inline-block;
-    border: 1.5px solid #184167;
+    border: 1.5px solid var(--primary-color);
     border-radius: 4px;
     padding: 9px 40px 9px 40px;
     white-space: nowrap;
@@ -32,18 +32,18 @@
     transition: all .3s ease;
 
     &:hover {
-      color: #184167;
+      color: var(--primary-color);
       background-color: #fff;
     }
   }
 
   &.secondary {
-    color: #184167;
+    color: var(--primary-color);
     background-color: #fff;
 
     &:hover {
       color: #fff;
-      background-color: #184167;
+      background-color: var(--primary-color);
     }
   }
 }

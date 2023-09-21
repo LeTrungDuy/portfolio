@@ -1,0 +1,118 @@
+.portfolio-experience {
+
+  &__wrapper {
+    display: flex;
+    margin-bottom: 30px;
+
+    @media (max-width: 540px){
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__left {
+    width: 40%;
+
+    @media (max-width: 540px){
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 60%;
+
+    p {
+      &:first-of-type {
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 540px){
+      width: 100%;
+    }
+  }
+
+  &__infor {
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+    @media (max-width: 540px){
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      &:first-child {
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+
+      &:last-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__skill {
+    .portfolio-heading{
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 16px;
+    padding-left: 0;
+    line-height: 20px;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &-title {
+      padding-bottom: 0;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      width: auto;
+      max-width: 100%;
+      font-weight: 600;
+      min-width: 80px;
+    }
+
+    &.cards {
+      flex-wrap: unset;
+      column-gap: 30px;
+      li {
+        width: 33.3333%;
+      }
+
+      @media (max-width: 1040px){
+        column-gap: 20px;
+      }
+
+      @media (max-width: 540px){
+        flex-direction: column;
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__role {
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    @media (max-width: 1600px){
+      margin-bottom: 30px;
+    }
+  }
+}

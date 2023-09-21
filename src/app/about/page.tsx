@@ -1,7 +1,11 @@
-import Link from "next/link";
+import Experience from "@/components/organism/experience";
 
 const AboutPage = () => {
-  return <>This is about</>;
+  return (
+    <div className="about">
+      <Experience />
+    </div>
+  );
 };
 
 export default AboutPage;

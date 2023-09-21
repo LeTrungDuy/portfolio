@@ -1,0 +1,34 @@
+.portfolio-card {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #D3F4EC;
+
+  &.yellow {
+    background-color: #FCE8D4;
+  }
+  &.green {
+    background-color: #E3F9E0;
+  }
+  
+  h3 {
+    font-weight: 800;
+    font-size: 40px;
+
+    @media (max-width: 1600px){
+      font-size: 35px;
+    }
+  }
+  
+  span {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 1600px){
+    padding: 45px 20px;
+  }
+}

@@ -48,7 +48,7 @@
   }
 
   &__text {
-    color: #184167;
+    color: var(--primary-color);
   }
 
   @media (max-width: 1600px){
