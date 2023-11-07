@@ -1,0 +1,24 @@
+.m-card-journey {
+  padding: 40px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  &__time {
+    display: flex;
+    justify-content: space-between;
+    span {
+      color: #FF972D;
+      font-size: 16px;
+      font-weight: 500;
+
+      &:last-child {
+        color: #55527C;
+      }
+    }
+  }
+  &__title {
+    margin-top: 3px;
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+}
