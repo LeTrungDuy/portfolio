@@ -4,7 +4,7 @@
   clear: both;
   float: left;
   padding-left: 370px;
-  background-color: #EFFBF8;
+  background-color: #effbf8;
 
   &__content {
     width: 100%;
@@ -16,22 +16,36 @@
     width: 100%;
     min-height: 100vh;
     display: flex;
-    align-items: center
+    align-items: center;
   }
 
   .about {
     padding-top: 80px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 
-  @media (max-width: 1600px){
+  .contact {
+    padding-top: 80px;
+  }
+
+  .project {
+    padding-top: 80px;
+  }
+
+  @media (max-width: 1600px) {
     padding-left: 300px;
   }
-  
-  @media (max-width: 1040px){
-    padding: 80px 0px;
-    
+
+  @media (max-width: 1040px) {
+    padding: 60px 0 0 0;
+
+    .home {
+      justify-content: center;
+    }
     .about {
+      padding-top: 40px;
+    }
+    .contact {
       padding-top: 40px;
     }
   }

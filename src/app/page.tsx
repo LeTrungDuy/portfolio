@@ -5,7 +5,7 @@ import Container from "@/components/molecules/container";
 const HomePage = () => {
   return (
     <Container>
-      <div className="home">
+      <div className="home animated fadeInLeft">
         <Introduce
           name="Duy"
           role="Front-end Developer"

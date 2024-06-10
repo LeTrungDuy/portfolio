@@ -1,0 +1,40 @@
+.portfolio-slider {
+  position: relative;
+  &__button-group {
+    position: absolute;
+    top: -88px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+  }
+  .button-prev,
+  .button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 49px;
+    height: 49px;
+    border-radius: 100%;
+    border: 1px solid #130f49;
+    margin-right: 12px;
+    position: relative;
+    transition: all 0.3s ease;
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+
+    &:hover {
+      background-color: var(--primary-color);
+      svg {
+        color: #ffffff;
+      }
+    }
+  }
+}

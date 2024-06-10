@@ -5,6 +5,7 @@
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
     --primary-color: #184167;
+    --blue-color: #A5A6FF;
 }
 
 * {
@@ -23,6 +24,8 @@ body {
   letter-spacing: 0px;
   word-wrap: break-word;
   color: var(--primary-color);
+  scrollbar-width: thin; 
+  scrollbar-color: var(--primary-color) #FFFFFF; 
 }
 
 p {

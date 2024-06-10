@@ -2,7 +2,7 @@ import Experience from "@/components/organism/experience";
 
 const AboutPage = () => {
   return (
-    <div className="about">
+    <div className="about animated fadeInLeft">
       <Experience />
     </div>
   );

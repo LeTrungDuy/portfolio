@@ -12,19 +12,7 @@ import "./index.scss";
 
 import logo from "../../../../public/images/logo.jpg";
 import logoMobi from "../../../../public/images/logo-mobi.png";
-
-const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "About", href: "/about" },
-  { text: "Project", href: "/project" },
-  { text: "Contact", href: "/contact" },
-];
-
-const SOCIAL_LIST = [
-  { social: "facebook", href: "facebook.com" },
-  { social: "linkedin", href: "linkedin.com" },
-  { social: "telegram", href: "telegram.com" },
-];
+import { MENU_LIST, SOCIAL_LIST } from "../../../../public/mocks/data";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -58,6 +46,7 @@ const Navbar = () => {
                 href={item.href}
                 text={item.text}
                 active={pathName === item.href}
+                type="tertiary"
               />
             </li>
           ))}

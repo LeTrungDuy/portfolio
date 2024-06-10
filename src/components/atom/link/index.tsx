@@ -5,14 +5,16 @@ interface INavItem {
   text: string;
   href: string;
   active?: boolean;
-  type?: "primary" | "secondary";
+  type?: "primary" | "secondary" | "tertiary";
+  blank?: boolean;
 }
 
-const NavItem = ({ text, href, active, type }: INavItem) => {
+const NavItem = ({ text, href, active, type, blank }: INavItem) => {
   return (
     <Link
       className={`portfolio-navitem ${type} ${active ? "active" : ""}`}
       href={href}
+      target={blank ? "_blank" : ""}
     >
       {text}
     </Link>

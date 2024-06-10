@@ -1,6 +1,9 @@
-import { ReactNode } from "react";
+"use client";
+
 import NavItem from "@/components/atom/link";
 import "./index.scss";
+import Button from "@/components/atom/button";
+// import pdf from "../../../../public/";
 
 interface IIntroduce {
   name: string;
@@ -17,6 +20,16 @@ const Introduce = ({
   location,
   imgUrl,
 }: IIntroduce) => {
+  const downloadCV = () => {
+    const url = "/LE-TRUNG-DUY-CV.pdf";
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "LE-TRUNG-DUY-CV.pdf");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="portfolio-introduce">
       <div className="portfolio-introduce__infor">
@@ -35,7 +48,7 @@ const Introduce = ({
           <p dangerouslySetInnerHTML={{ __html: descrition }}></p>
         </div>
         <div className="portfolio-introduce__contact">
-          <NavItem text="Got a project?" href="/project" type="primary" />
+          <Button text="Download CV" type="primary" onClick={downloadCV} />
           <NavItem text="Who i am?" href="/about" type="secondary" />
         </div>
       </div>

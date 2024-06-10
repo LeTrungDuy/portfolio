@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import "./index.scss";
 

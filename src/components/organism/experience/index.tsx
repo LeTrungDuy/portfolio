@@ -1,18 +1,20 @@
 import Heading from "@/components/atom/heading";
-import "./index.scss";
 import NavItem from "@/components/atom/link";
-import Tag from "@/components/atom/tag";
 import Divider from "@/components/atom/divider";
 import Card from "@/components/atom/card";
+import Container from "@/components/molecules/container";
+import CardJourney from "@/components/molecules/card-journey";
+import Carousel from "@/components/organism/carousel";
+import Image from "next/image";
 import {
   DETAILS,
   JOURNEY,
+  OTHERS,
   SKILLS,
   TOOLS,
   TOTALS,
 } from "../../../../public/mocks/data";
-import Container from "@/components/molecules/container";
-import CardJourney from "@/components/molecules/card-journey";
+import "./index.scss";
 
 const Experience = () => {
   return (
@@ -26,11 +28,11 @@ const Experience = () => {
           </div>
           <div className="portfolio-experience__right">
             <p>
-              {`Hi, I'm Duy. I am a passionate front-end developer with four years of
+              {`Hi, I'm Duy. I am a passionate front-end developer with five years of
             hands-on experience in web experiences.`}
             </p>
             <p>
-              {`Throughout my journey, the projects I have worked on are in the field of e-commerce, banking, branding etc.I'm a sociable. Enjoy working in a team and learning new technologies.Looking forward to working with you.`}
+              {`Throughout my journey, the projects I have worked on are in the field of e-commerce, banking, branding, health etc. I'm a sociable, enjoy working in a team and learning new technologies. Looking forward to working with you.`}
             </p>
             <div className="portfolio-experience__infor">
               {DETAILS.map((item) => (
@@ -55,48 +57,71 @@ const Experience = () => {
         </ul>
         <Divider />
         <div className="portfolio-experience__skill">
-          <Heading note="- SKills" text="My knowledge" />
-          <ul className="portfolio-experience__list">
-            <li className="portfolio-experience__list-title">Langague:</li>
-            {SKILLS.map((item) => (
-              <li key={item}>
-                <Tag text={item} />
-              </li>
-            ))}
-          </ul>
-          <ul className="portfolio-experience__list">
-            <li className="portfolio-experience__list-title">Tools:</li>
-            {TOOLS.map((item) => (
-              <li key={item}>
-                <Tag text={item} />
-              </li>
-            ))}
-          </ul>
-          <ul className="portfolio-experience__list">
-            <li className="portfolio-experience__list-title">Design System:</li>
-            <li>Atomic</li>
-          </ul>
-          <ul className="portfolio-experience__list">
-            <li className="portfolio-experience__list-title">Accessibility:</li>
-            <li>Website accessibility for people with disabilities.</li>
-          </ul>
+          <Heading note="- SKills" text="My skills" />
+          <div className="portfolio-experience__skill-wrapper">
+            <div className="portfolio-experience__skill-items">
+              <p className="portfolio-experience__list-title">Langague:</p>
+              <ul className="portfolio-experience__list">
+                {SKILLS.map((item) => (
+                  <li key={item.id}>
+                    <Image width={50} height={50} src={item.logo} alt="" />
+                    <p>{item.name}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="portfolio-experience__skill-items">
+              <p className="portfolio-experience__list-title">Tools:</p>
+              <ul className="portfolio-experience__list">
+                {TOOLS.map((item) => (
+                  <li key={item.id}>
+                    <Image width={50} height={50} src={item.logo} alt="" />
+                    <p>{item.name}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="portfolio-experience__skill-items">
+              <p className="portfolio-experience__list-title">Other:</p>
+              <ul className="portfolio-experience__list">
+                {OTHERS.map((item) => (
+                  <li key={item.id}>
+                    <Image width={50} height={50} src={item.logo} alt="" />
+                    <p>{item.name}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </Container>
       <div className="portfolio-experience__journeys">
         <Container>
           <Heading note="- Experience" text="Everything about me!" />
-          <ul className="portfolio-experience__journeys-list">
+          <div className="portfolio-experience__journeys-list">
             {JOURNEY.map((journey) => (
-              <li key={journey.id}>
+              <div
+                className="portfolio-experience__journeys-item"
+                key={journey.id}
+              >
                 <CardJourney
                   time={journey.time}
                   companyName={journey.company}
+                  link={journey.link}
                   position={journey.position}
                   description={journey.description}
                 />
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
+        </Container>
+      </div>
+      <div className="portfolio-experience__projects">
+        <Container>
+          <Heading note="" text="Projects" />
+          <div className="portfolio-experience__projects-slide">
+            <Carousel />
+          </div>
         </Container>
       </div>
     </div>
