@@ -8,6 +8,12 @@
     align-items: center;
     justify-content: center;
     column-gap: 16px;
+
+    @media (max-width: 600px) {
+      position: initial;
+      justify-content: start;
+      padding-bottom: 30px;
+    }
   }
   .button-prev,
   .button-next {
