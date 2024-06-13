@@ -26,6 +26,7 @@ body {
   color: var(--primary-color);
   scrollbar-width: thin; 
   scrollbar-color: var(--primary-color) #FFFFFF; 
+  scroll-behavior: smooth;
 }
 
 p {

@@ -1,17 +1,12 @@
 "use client";
 
 import React, { useRef } from "react";
-import Project from "@/components/molecules/project";
-import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { PROJECTS } from "../../../../public/mocks/data";
-import prevIcon from "../../../../public/icons/prev-slide.svg";
-import nextIcon from "../../../../public/icons/next-slide.svg";
 import "./index.scss";
 
-const Carousel = () => {
+const Carousel = ({ children }: { children: React.ReactNode }) => {
   let sliderRef = useRef<Slider | null>(null);
 
   const next = () => {
@@ -102,16 +97,7 @@ const Carousel = () => {
         </button>
       </div>
       <Slider ref={sliderRef} {...settings}>
-        {PROJECTS.map((project) => (
-          <Project
-            key={project.id}
-            urlImg={project.urlImg}
-            name={project.name}
-            company={project.company}
-            link={project.link}
-            linkCompany={project.linkCompany}
-          />
-        ))}
+        {children}
       </Slider>
     </div>
   );

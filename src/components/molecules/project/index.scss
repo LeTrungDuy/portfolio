@@ -1,5 +1,5 @@
 .portfolio-project {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -7,9 +7,15 @@
   margin-right: 30px;
   padding-bottom: 30px;
   border-radius: 10px;
+  transition: all 0.3s ease;
+  width: auto !important;
 
   @media (max-width: 600px) {
     margin-right: 0;
+  }
+
+  &:hover {
+    transform: scale(1.1);
   }
 
   img {

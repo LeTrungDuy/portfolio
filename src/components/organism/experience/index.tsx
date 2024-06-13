@@ -10,11 +10,13 @@ import {
   DETAILS,
   JOURNEY,
   OTHERS,
+  PROJECTS,
   SKILLS,
   TOOLS,
   TOTALS,
 } from "../../../../public/mocks/data";
 import "./index.scss";
+import Project from "@/components/molecules/project";
 
 const Experience = () => {
   return (
@@ -24,7 +26,7 @@ const Experience = () => {
           <div className="portfolio-experience__left">
             <Heading note="- Nice to meet you!" text="Le Trung Duy" />
             <div className="portfolio-experience__role">Web Developer</div>
-            <NavItem href="/project" text="Got a project?" type="primary" />
+            <NavItem href="#project" text="Got a project?" type="primary" />
           </div>
           <div className="portfolio-experience__right">
             <p>
@@ -116,11 +118,22 @@ const Experience = () => {
           </div>
         </Container>
       </div>
-      <div className="portfolio-experience__projects">
+      <div id="project" className="portfolio-experience__projects">
         <Container>
           <Heading note="" text="Projects" />
           <div className="portfolio-experience__projects-slide">
-            <Carousel />
+            <Carousel>
+              {PROJECTS.map((project) => (
+                <Project
+                  key={project.id}
+                  urlImg={project.urlImg}
+                  name={project.name}
+                  company={project.company}
+                  link={project.link}
+                  linkCompany={project.linkCompany}
+                />
+              ))}
+            </Carousel>
           </div>
         </Container>
       </div>
