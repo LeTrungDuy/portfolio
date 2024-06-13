@@ -1,11 +1,9 @@
-import Navbar from "@/components/organism/navbar";
-import Preloader from "@/components/organism/preloader";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Layout from "@/components/template/layout";
 import "./globals.css";
 import "./animation.css";
 import "./layout.scss";
-import Cursor from "@/components/atom/cursor";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,12 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Preloader />
-        <Navbar />
-        <div className="portfolio-page">
-          <div className="portfolio-page__content">{children}</div>
-        </div>
-        <Cursor />
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

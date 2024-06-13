@@ -13,13 +13,13 @@ interface IProject {
 const Project = ({ urlImg, company, linkCompany, link, name }: IProject) => {
   return (
     <div className="portfolio-project">
-      <Link className="portfolio-project__link" href={link}>
+      <Link className="portfolio-project__link" href={link} target="_blank">
         <Image src={urlImg} alt="Duy's project" />
       </Link>
       <Link href={linkCompany} className="portfolio-project__company">
         {company}
       </Link>
-      <Link href={link} className="portfolio-project__name">
+      <Link href={link} className="portfolio-project__name" target="_blank">
         {name}
       </Link>
     </div>
