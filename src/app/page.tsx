@@ -10,7 +10,7 @@ const HomePage = () => {
           name="Duy"
           role="Front-end Developer"
           imgUrl={avatar.src}
-          descrition={`I'm a front-end developer in Ho Chi Minh with <span>4+ years</span> of experience`}
+          descrition={`I'm a front-end developer in Ho Chi Minh with <span>5+ years</span> of experience`}
         />
       </div>
     </Container>
