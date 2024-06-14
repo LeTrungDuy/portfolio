@@ -34,7 +34,7 @@ const Experience = () => {
             hands-on experience in web experiences.`}
             </p>
             <p>
-              {`Throughout my journey, the projects I have worked on are in the field of e-commerce, banking, branding, health etc. I'm a sociable, enjoy working in a team and learning new technologies. Looking forward to working with you.`}
+              {`Throughout my journey, the projects I have worked on are in the field of e-commerce, banking, branding, health etc. I'm sociable, enjoy working in a team and learning new technologies. Looking forward to working with you.`}
             </p>
             <div className="portfolio-experience__infor">
               {DETAILS.map((item) => (

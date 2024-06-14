@@ -9,7 +9,6 @@ const HomePage = () => {
         <Introduce
           name="Duy"
           role="Front-end Developer"
-          location="Ho Chi Minh"
           imgUrl={avatar.src}
           descrition={`I'm a front-end developer in Ho Chi Minh with <span>4+ years</span> of experience`}
         />

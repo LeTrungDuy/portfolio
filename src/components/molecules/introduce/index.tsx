@@ -3,23 +3,15 @@
 import NavItem from "@/components/atom/link";
 import "./index.scss";
 import Button from "@/components/atom/button";
-// import pdf from "../../../../public/";
 
 interface IIntroduce {
   name: string;
   role: string;
-  location: string;
   descrition: string | TrustedHTML;
   imgUrl: string;
 }
 
-const Introduce = ({
-  name,
-  descrition,
-  role,
-  location,
-  imgUrl,
-}: IIntroduce) => {
+const Introduce = ({ name, descrition, role, imgUrl }: IIntroduce) => {
   const downloadCV = () => {
     const url = "/LE-TRUNG-DUY-CV.pdf";
     const link = document.createElement("a");
@@ -39,9 +31,6 @@ const Introduce = ({
           </div>
           <div className="portfolio-introduce__role">
             <p>{role}</p>
-          </div>
-          <div className="portfolio-introduce__location">
-            <p>At {location}</p>
           </div>
         </div>
         <div className="portfolio-introduce__descrition">
